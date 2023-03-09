@@ -1,10 +1,13 @@
-from functools import reduce
+def multiply_list(lst):
+    result = 1
+    for num in lst:
+        result *= num
+    return result
 
-numbers = input("Enter a list of numbers separated by spaces: ").split()
-# The input() function returns a string, so we split it into a list of strings
+input_str = input("Enter a list of numbers: ")
 
-numbers = [int(num) for num in numbers]  # Convert each string to an integer
+num_str_lst = input_str.split()
+num_lst = [int(num_str) for num_str in num_str_lst]
 
-result = reduce(lambda x, y: x * y, numbers)
-
-print(result)
+result = multiply_list(num_lst)
+print("Result:", result)
