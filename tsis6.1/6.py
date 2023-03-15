@@ -1,7 +1,7 @@
 import string
 import os
 
-directory = "./files/"
+directory = "./Desktop/"
 
 if not os.path.exists(directory):
     os.makedirs(directory)
